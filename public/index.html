@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <link href="https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700,900" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/@mdi/font@4.x/css/materialdesignicons.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/vuetify@2.x/dist/vuetify.min.css" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, minimal-ui">
+
+    <link rel="manifest" href="/manifest.webmanifest">
+    <meta name="theme-color" content="#3367D6" />
+    <title>Another cool title</title>
+</head>
+
+<body>
+    <div id="app">
+        <v-app>
+
+            <!-- NAVIGATION DRAWER -->
+            <v-navigation-drawer v-model="drawer" app>
+                <v-list nav dense>
+                    <v-list-item-group v-model="group" active-class="red accent-4 text--accent-4">
+
+                        <v-list-item>
+                            <v-list-item-icon>
+                                <v-icon>mdi-folder</v-icon>
+                            </v-list-item-icon>
+                            <v-list-item-title>Menu 1</v-list-item-title>
+                        </v-list-item>
+
+                    </v-list-item-group>
+                </v-list>
+            </v-navigation-drawer>
+
+            <!-- TOP APP BAR -->
+            <v-app-bar app color="deep-purple accent-4" dense dark>
+                <v-app-bar-nav-icon @click="drawer = !drawer"></v-app-bar-nav-icon>
+                <v-toolbar-title>Some cool title ?</v-toolbar-title>
+
+                <v-spacer></v-spacer>
+
+                <!-- ICON 1 -->
+                <v-btn v-show="show_install_button" icon id="butInstall">
+                    <v-icon>mdi-download</v-icon>
+                </v-btn>
+
+                <!-- ICON 2 -->
+                <v-btn icon>
+                    <v-icon>mdi-magnify</v-icon>
+                </v-btn>
+
+                <!-- MENU -->
+                <v-menu left bottom>
+                    <template v-slot:activator="{ on, attrs }">
+                        <v-btn icon v-bind="attrs" v-on="on">
+                            <v-icon>mdi-dots-vertical</v-icon>
+                        </v-btn>
+                    </template>
+
+                    <v-list>
+                        <v-list-item v-for="n in 5" :key="n" @click="() => {}">
+                            <v-list-item-title>Option {{ n }}</v-list-item-title>
+                        </v-list-item>
+                    </v-list>
+                </v-menu>
+
+            </v-app-bar>
+
+            <!-- MAIN CONTENT -->
+            <v-main>
+
+            </v-main>
+        </v-app>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.x/dist/vue.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vuetify@2.x/dist/vuetify.js"></script>
+    <script src="scripts/app.js"></script>
+    <script src="scripts/install.js"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,16 @@
+{
+    "short_name": "PWA template",
+    "name": "A template for a Vuetify PWA",
+    "icons": [
+        {
+            "src": "images/app_icon.png",
+            "sizes": "3840x3840",
+            "type": "image/png",
+            "purpose": "maskable"
+        }
+    ],
+    "start_url": "/index.html",
+    "background_color": "#3367D6",
+    "display": "standalone",
+    "theme_color": "#3367D6"
+}
