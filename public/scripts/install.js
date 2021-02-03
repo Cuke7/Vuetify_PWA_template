@@ -18,7 +18,6 @@ function saveBeforeInstallPromptEvent(evt) {
   deferredInstallPrompt = evt;
   vue.show_install_button = true;
   //console.log('saveBeforeInstallPromptEvent => block')
-  console.log("HELLO ?")
 }
 
 /**
