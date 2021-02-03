@@ -6,11 +6,12 @@
             "src": "images/app_icon.png",
             "sizes": "3840x3840",
             "type": "image/png",
-            "purpose": "maskable"
+            "purpose": "any maskable"
         }
     ],
     "start_url": "/index.html",
     "background_color": "#3367D6",
     "display": "standalone",
-    "theme_color": "#3367D6"
+    "theme_color": "#3367D6",
+    "orientation": "portrait"
 }
