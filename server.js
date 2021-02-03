@@ -1,5 +1,5 @@
 const express = require('express');
-var enforce = require('express-sslify');
+var enforce = require('express-sslify'); // redirects http to https
 
 const app = express();
 
