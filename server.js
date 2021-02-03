@@ -5,11 +5,11 @@ const port = 8000;
 
 app.use(express.static('public'));
 
-app.listen(port, () => {
-    console.log(`Example app listening at http://localhost:${port}`)
-})
+app.listen(process.env.PORT || 80, () => {
+    console.log("Listening to requests on" + process.env.PORT);
+});
 
-const allowedOrigins = ["http://127.0.0.1:8000"];
+const allowedOrigins = ["http://127.0.0.1", "https://vuetify-pwa-template.herokuapp.com/"];
 
 app.get("/get_data/", get_data);
 app.get("/get_data", get_data);
